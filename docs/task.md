@@ -1,0 +1,23 @@
+# Terminal Tetris Development Task List
+
+- [ ] Initialize project artifacts (implementation plan) <!-- id: 0 -->
+- [ ] Design and Plan <!-- id: 1 -->
+    - [x] Create implementation plan <!-- id: 2 -->
+- [x] Review plan with user <!-- id: 3 -->
+- [x] Implementation <!-- id: 4 -->
+    - [x] Set up basic `curses` loop and input handling <!-- id: 5 -->
+    - [x] Implement board data structure (20x10) <!-- id: 6 -->
+    - [x] Define Tetromino shapes and rotations <!-- id: 7 -->
+    - [x] Implement game logic (gravity, collision, locking) <!-- id: 8 -->
+    - [x] Implement line clearing and scoring <!-- id: 9 -->
+    - [x] Implement interactive speed selection menu <!-- id: 10 -->
+    - [x] Add Game Over state and restart option <!-- id: 11 -->
+- [/] Verification <!-- id: 12 -->
+    - [/] Manual testing of game mechanics <!-- id: 13 -->
+    - [/] Verify speed selection works <!-- id: 14 -->
+- [/] Web Porting <!-- id: 15 -->
+    - [x] Create web implementation plan <!-- id: 16 -->
+    - [x] Setup HTML/CSS structure <!-- id: 17 -->
+    - [x] Port game logic to JavaScript <!-- id: 18 -->
+    - [x] Implement UI (Menu, Score, Pause) <!-- id: 19 -->
+    - [/] Verify web functionality <!-- id: 20 -->
