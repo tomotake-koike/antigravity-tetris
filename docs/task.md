@@ -1,23 +1,21 @@
-# Terminal Tetris Development Task List
+# 開発タスクリスト
 
-- [ ] Initialize project artifacts (implementation plan) <!-- id: 0 -->
-- [ ] Design and Plan <!-- id: 1 -->
-    - [x] Create implementation plan <!-- id: 2 -->
-- [x] Review plan with user <!-- id: 3 -->
-- [x] Implementation <!-- id: 4 -->
-    - [x] Set up basic `curses` loop and input handling <!-- id: 5 -->
-    - [x] Implement board data structure (20x10) <!-- id: 6 -->
-    - [x] Define Tetromino shapes and rotations <!-- id: 7 -->
-    - [x] Implement game logic (gravity, collision, locking) <!-- id: 8 -->
-    - [x] Implement line clearing and scoring <!-- id: 9 -->
-    - [x] Implement interactive speed selection menu <!-- id: 10 -->
-    - [x] Add Game Over state and restart option <!-- id: 11 -->
-- [/] Verification <!-- id: 12 -->
-    - [/] Manual testing of game mechanics <!-- id: 13 -->
-    - [/] Verify speed selection works <!-- id: 14 -->
-- [/] Web Porting <!-- id: 15 -->
-    - [x] Create web implementation plan <!-- id: 16 -->
-    - [x] Setup HTML/CSS structure <!-- id: 17 -->
-    - [x] Port game logic to JavaScript <!-- id: 18 -->
-    - [x] Implement UI (Menu, Score, Pause) <!-- id: 19 -->
-    - [/] Verify web functionality <!-- id: 20 -->
+- [x] プロジェクト初期化（実装計画） <!-- id: 0 -->
+- [x] 設計と計画 <!-- id: 1 -->
+    - [x] 実装計画の作成 <!-- id: 2 -->
+- [x] 計画のレビュー <!-- id: 3 -->
+- [x] 実装フェーズ（ターミナル版） <!-- id: 4 -->
+    - [x] `curses` ループと基本入力処理 <!-- id: 5 -->
+    - [x] ボードデータ構造（20x10）の実装 <!-- id: 6 -->
+    - [x] テトロミノの形状と回転の定義 <!-- id: 7 -->
+    - [x] ゲームロジック（重力、衝突、固定） <!-- id: 8 -->
+    - [x] ライン消去とスコアリング <!-- id: 9 -->
+    - [x] 対話的な速度選択メニュー <!-- id: 10 -->
+    - [x] ゲームオーバー状態とリスタート機能 <!-- id: 11 -->
+- [x] Web版への移行 <!-- id: 15 -->
+    - [x] Web実装計画の作成 <!-- id: 16 -->
+    - [x] HTML/CSS構造のセットアップ <!-- id: 17 -->
+    - [x] ゲームロジックのJavaScriptへの移植 <!-- id: 18 -->
+    - [x] UI実装（メニュー、スコア、ポーズ） <!-- id: 19 -->
+    - [x] 機能追加（サウンド、爆発エフェクト、7-Bag、スコアリング） <!-- id: 21 -->
+    - [x] 動作検証 <!-- id: 20 -->

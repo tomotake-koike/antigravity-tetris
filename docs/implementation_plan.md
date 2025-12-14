@@ -1,41 +1,43 @@
-# Implementation Plan - Web Tetris
+# 実装計画 - Web版テトリス
 
-This plan outlines the steps to port the terminal-based Tetris game to a modern web application.
+この計画は、ターミナル版テトリスをモダンなWebアプリケーションに移植する手順を概説します。
 
-## Goal Description
-Create a premium, web-based Tetris game that replicates the mechanics of the Python version (WASD controls, speed scaling, pause) but utilizes modern web technologies for a superior visual experience.
+## 目標
+Python版のメカニクス（WASD操作、速度調整、ポーズ機能）を再現しつつ、モダンなWeb技術を使用して優れた視覚体験を提供するプレミアムなWeb版テトリスを作成します。
 
-## User Review Required
+## 重要: ユーザー確認事項
 > [!NOTE]
-> The game will be built in `.../Antigravity/web/` to avoid cluttering the root directory.
+> ルートディレクトリの整理のため、ゲームは `.../Antigravity/web/` ディレクトリ内に構築されます。
 
-## Proposed Changes
+## 変更内容
 
-### Structure
-#### [NEW] Directory: `/Users/tomotake/Library/CloudStorage/GoogleDrive-tomotake.koike@gmail.com/マイドライブ/Antigravity/web/`
+### 構成
+#### [新規] ディレクトリ: `.../Antigravity/web/`
 
-#### [NEW] [index.html](file:///Users/tomotake/Library/CloudStorage/GoogleDrive-tomotake.koike@gmail.com/マイドライブ/Antigravity/web/index.html)
-- Main entry point.
-- Contains the game canvas/grid container and UI overlays (Start Menu, Game Over, Pause).
+#### [新規] index.html
+- メインエントリーポイント。
+- ゲームキャンバス/グリッドコンテナおよびUIオーバーレイ（スタートメニュー、ゲームオーバー、ポーズ）を含みます。
 
-#### [NEW] [style.css](file:///Users/tomotake/Library/CloudStorage/GoogleDrive-tomotake.koike@gmail.com/マイドライブ/Antigravity/web/style.css)
-- **Aesthetics**: Dark theme, vibrant block colors, subtle glow effects, responsive layout.
-- **Layout**: Centered game board with side panel for Score/Level/Next Piece.
+#### [新規] style.css
+- **デザイン**: ダークテーマ、鮮やかなブロック色、微細な発光エフェクト、レスポンシブレイアウト。
+- **レイアウト**: 中央にゲームボード、サイドパネルにスコア/レベル/ネクスト表示。
 
-#### [NEW] [script.js](file:///Users/tomotake/Library/CloudStorage/GoogleDrive-tomotake.koike@gmail.com/マイドライブ/Antigravity/web/script.js)
-- **Logic Port**:
-    - `Tetromino` definitions and rotation logic.
-    - `TetrisGame` class managing board state.
-    - `Game Loop` using `requestAnimationFrame`.
-    - **Input Handling**: 'keydown' events for Arrows, WASD, Q, ESC.
-    - **Speed Logic**: Level selection 1-10, 30pts threshold, speed /= 3.
+#### [新規] script.js
+- **ロジック移植**:
+    - `Tetromino` 定義と回転ロジック。
+    - `TetrisGame` クラスによるボード状態管理。
+    - `requestAnimationFrame` を使用したゲームループ。
+    - **入力処理**: 矢印キー、WASD、Q、ESCの `keydown` イベント処理。
+    - **速度ロジック**: レベル選択（1-10）、30点ごとの閾値、速度の1/3加速。
+    - **追加機能**: 7-Bag生成、ハードドロップ加点、Web Audio APIによるサウンド、Canvas爆発エフェクト。
 
-## Verification Plan
+## 検証計画
 
-### Manual Verification
-- Open `index.html` in a browser.
-- Verify "Start Level" selection works.
-- Verify rendering (Solid blocks, grid).
-- Test Controls: WASD/Arrows to move, Up to rotate, Down to soft drop.
-- Test Mechanics: Line clearing, Scoring (10pts/line), Speed up (verify abrupt speed up at 30pts).
-- Test Pause (ESC) and Quit/Reload behavior.
+### 手動検証
+- ブラウザで `index.html` を開く。
+- 「Start Level」の選択が機能することを確認。
+- 定常的な描画（ブロック、グリッド）を確認。
+- 操作テスト: WASD/矢印キーでの移動、上キーでの回転、下キーでのソフトドロップ。
+- メカニクス: ライン消去、スコアリング（1ライン10点、落下1点）、速度上昇（30点ごと）。
+- ポーズ（ESC）および終了/リロード動作の確認。
+- ゲームオーバー時の爆発エフェクトとリトライ機能の確認。

@@ -1,30 +1,30 @@
-# Antigravity Tetris
+# アンチグラビティ・テトリス
 
-A premium web-based Tetris implementation with sound effects, particle explosions, and smooth controls.
+効果音、爆発エフェクト、滑らかな操作性を備えた高品質なWeb版テトリスです。
 
-## Features
+## 特徴
 
-- **Classic Gameplay**: 20x10 grid, 7-bag randomizer, super rotation system (basic).
-- **Web Audio Sound**: Procedural sound effects for drops, clears, and explosions (no external assets).
-- **Visual Effects**: Particle system explosions on Game Over, screen shake, and smooth animations.
-- **Controls**:
-    - Arrow Keys / WASD: Move and Rotate
-    - ESC: Pause
-    - Q: Quit to Menu
-- **Scoring**:
-    - Lines: 10 points per line (multiplied by level logic implicitly in speed)
-    - Soft Drop: 1 point per row
+- **クラシックなゲームプレイ**: 20x10グリッド、7種1巡（7-Bag）生成システム、回転システム。
+- **Web Audio サウンド**: 落下音、ライン消去音、爆発音などを外部ファイルなしでプログラム生成。
+- **視覚エフェクト**: ゲームオーバー時のパーティクル爆発、画面シェイク、滑らかなアニメーション。
+- **操作方法**:
+    - 矢印キー / WASD: 移動・回転
+    - ESC: ポーズ
+    - Q: メニューに戻る
+- **スコア計算**:
+    - ライン消去: 1ラインにつき10点（レベルに応じて速度変化）
+    - ソフトドロップ: 1段につき1点
 
-## Setup
+## セットアップ
 
-Simply open `web/index.html` in a modern web browser. No build step required.
+ブラウザで `web/index.html` を開くだけでプレイ可能です。ビルド手順は不要です。
 
-## Documentation
+## ドキュメント
 
-Design documents are located in the `docs/` directory:
-- `implementation_plan.md`: Initial plan and specs.
-- `task.md`: Development task tracking.
+設計ドキュメントは `docs/` ディレクトリにあります：
+- `implementation_plan.md`: 実装計画と仕様。
+- `task.md`: 開発タスクリスト。
 
-## License
+## ライセンス
 
 MIT
